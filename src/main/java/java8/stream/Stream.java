@@ -1,9 +1,8 @@
 package java8.stream;
 
-import java8.stream.model.Person;
-import java8.stream.model.Sex;
-import java8.stream.model.stringify.PersonStringifier;
-import java8.stream.model.stringify.SurnameSexStrigifier;
+import java8.model.Person;
+import java8.model.Sex;
+import java8.model.stringify.PersonStringifier;
 import java8.stream.predicates.FemaleWithSurnameOnW;
 import java8.stream.predicates.PersonPredicate;
 

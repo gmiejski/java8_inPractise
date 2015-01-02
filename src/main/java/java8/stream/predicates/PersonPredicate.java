@@ -1,6 +1,6 @@
 package java8.stream.predicates;
 
-import java8.stream.model.Person;
+import java8.model.Person;
 
 import java.util.function.Predicate;
 

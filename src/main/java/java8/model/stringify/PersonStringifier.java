@@ -1,6 +1,6 @@
-package java8.stream.model.stringify;
+package java8.model.stringify;
 
-import java8.stream.model.Person;
+import java8.model.Person;
 
 @FunctionalInterface
 public interface PersonStringifier {

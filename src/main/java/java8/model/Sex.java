@@ -1,4 +1,4 @@
-package java8.stream.model;
+package java8.model;
 
 public enum Sex {
     MALE, FEMALE;

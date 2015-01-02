@@ -1,7 +1,7 @@
 package java8.stream.predicates;
 
-import java8.stream.model.Person;
-import java8.stream.model.Sex;
+import java8.model.Person;
+import java8.model.Sex;
 
 public class MalePersonPredicate implements PersonPredicate{
     @Override
