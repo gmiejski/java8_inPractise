@@ -8,6 +8,7 @@ import java8.stream.predicates.FemaleWithSurnameOnW;
 import java8.stream.predicates.PersonPredicate;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -23,9 +24,11 @@ public class Stream {
         Map<String, List<Person>> personsByName = persons.stream().collect(Collectors.groupingBy(Person::getName));
         personsByName.entrySet().stream().forEach(x -> System.out.println(x.getKey() + " : " + x.getValue().stream().map(Person::getSurname).collect(Collectors.joining(", "))));
 
+        persons.sort(Comparator.comparing(Person::getName));
+        printPersons(persons, Person::toString);
+
         List<Person> filteredPersons = filter(persons, new FemaleWithSurnameOnW());
-        
-        printPersons(filteredPersons, new SurnameSexStrigifier());
+        printPersons(filteredPersons, x -> x.getSex().toString());
     }
 
     private static void printPersons(List<Person> persons, PersonStringifier personStringifier) {
