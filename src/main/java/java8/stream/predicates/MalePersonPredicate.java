@@ -1,9 +1,9 @@
 package java8.stream.predicates;
 
-import java8.model.Person;
-import java8.model.Sex;
+import java8.model.person.Person;
+import java8.model.person.Sex;
 
-public class MalePersonPredicate implements PersonPredicate{
+public class MalePersonPredicate implements PersonPredicate {
     @Override
     public boolean test(Person person) {
         return Sex.FEMALE.equals(person.getSex());

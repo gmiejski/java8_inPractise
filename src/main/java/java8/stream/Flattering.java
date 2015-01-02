@@ -2,6 +2,7 @@ package java8.stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import static java.util.stream.Collectors.toList;
 
@@ -23,6 +24,15 @@ public class Flattering {
 
         System.out.println(collect);
         System.out.println(dividableBy3);
+
+        int sum = numbers.stream().reduce(0, (x, y) -> x + y);
+        System.out.println("SUM = " + sum);
+
+        Optional<Integer> smallestDivisableBy3 = numbers.stream().map(x -> x * x).filter(x -> x % 3 == 0).findFirst();
+        smallestDivisableBy3.ifPresent(System.out::println);
+
+        Optional<Integer> max = numbers.stream().max(Integer::compare);
+        max.ifPresent(System.out::println);
 
     }
 

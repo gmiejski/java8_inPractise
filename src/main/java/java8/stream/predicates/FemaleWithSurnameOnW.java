@@ -1,7 +1,7 @@
 package java8.stream.predicates;
 
-import java8.model.Person;
-import java8.model.Sex;
+import java8.model.person.Person;
+import java8.model.person.Sex;
 
 public class FemaleWithSurnameOnW implements PersonPredicate {
 

@@ -1,8 +1,7 @@
 package java8.stream;
 
-import java8.model.Person;
-import java8.model.Sex;
-import java8.model.stringify.PersonStringifier;
+import java8.model.person.Person;
+import java8.model.person.stringify.PersonStringifier;
 import java8.stream.predicates.FemaleWithSurnameOnW;
 import java8.stream.predicates.PersonPredicate;
 
@@ -18,8 +17,8 @@ public class Stream {
 
 
     public static void main(String[] args) {
-        List<Person> persons = Arrays.asList(new Person("Adam", "Bajer"), new Person("Adam", "Bajerek"),
-                new Person("Tomasz", "Super"), new Person("Jadzia", "Wokosinska", Sex.FEMALE));
+        List<Person> persons = Arrays.asList(new Person.PersonBuilder("Adam", "Bajer").build(), new Person.PersonBuilder("Adam", "Bajerek").build(),
+                new Person.PersonBuilder("Tomasz", "Super").build(), new Person.PersonBuilder("Jadzia", "Wokosinska").build());
         Map<String, List<Person>> personsByName = persons.stream().collect(Collectors.groupingBy(Person::getName));
         personsByName.entrySet().stream().forEach(x -> System.out.println(x.getKey() + " : " + x.getValue().stream().map(Person::getSurname).collect(Collectors.joining(", "))));
 
