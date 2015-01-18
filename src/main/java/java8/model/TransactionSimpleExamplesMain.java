@@ -1,6 +1,9 @@
-package java8.model.transaction;
+package java8.model;
 
 import java8.model.person.Person;
+import java8.model.transaction.City;
+import java8.model.transaction.Traders;
+import java8.model.transaction.Transaction;
 
 import java.math.BigInteger;
 import java.time.LocalDateTime;
@@ -12,7 +15,7 @@ import java.util.Optional;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
-public class TransactionMain {
+public class TransactionSimpleExamplesMain {
 
     public static void main(String[] args) {
 
