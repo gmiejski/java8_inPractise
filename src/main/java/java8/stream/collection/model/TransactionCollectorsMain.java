@@ -1,17 +1,17 @@
-package java8.model;
+package java8.stream.collection.model;
 
-import java8.model.person.Person;
-import java8.model.transaction.City;
-import java8.model.transaction.Traders;
-import java8.model.transaction.Transaction;
+import java8.stream.collection.model.person.Person;
+import java8.stream.collection.model.transaction.City;
+import java8.stream.collection.model.transaction.Traders;
+import java8.stream.collection.model.transaction.Transaction;
 
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.*;
 
 import static java.util.stream.Collectors.*;
-import static java8.model.transaction.Transaction.TransactionTime;
-import static java8.model.transaction.Transaction.TransactionValue;
+import static java8.stream.collection.model.transaction.Transaction.TransactionTime;
+import static java8.stream.collection.model.transaction.Transaction.TransactionValue;
 
 public class TransactionCollectorsMain {
 
@@ -43,7 +43,9 @@ public class TransactionCollectorsMain {
 
         IntSummaryStatistics summaryStatistics = transactions.stream().collect(summarizingInt(value -> value.getValue().intValue()));
         Optional<BigInteger> valueSum = transactions.stream().map(Transaction::getValue).reduce((x1, x2) -> x1.add(x2));
+        int valueSum2 = transactions.stream().mapToInt(x -> x.getValue().intValue()).sum();
         assert valueSum.get().intValue() == summaryStatistics.getSum();
+        assert valueSum.get().intValue() == valueSum2;
 
         String joinedIds = transactions.stream().map(Transaction::getId).collect(joining(", "));
         System.out.println(joinedIds);

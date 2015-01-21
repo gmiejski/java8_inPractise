@@ -1,9 +1,9 @@
-package java8.model;
+package java8.stream.collection.model;
 
-import java8.model.person.Person;
-import java8.model.transaction.City;
-import java8.model.transaction.Traders;
-import java8.model.transaction.Transaction;
+import java8.stream.collection.model.person.Person;
+import java8.stream.collection.model.transaction.City;
+import java8.stream.collection.model.transaction.Traders;
+import java8.stream.collection.model.transaction.Transaction;
 
 import java.math.BigInteger;
 import java.time.LocalDateTime;

@@ -1,4 +1,4 @@
-package java8.binsearch;
+package java8.stream.binsearch;
 
 import java.util.List;
 import java.util.Random;

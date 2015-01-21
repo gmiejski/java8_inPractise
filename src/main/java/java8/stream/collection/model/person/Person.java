@@ -1,6 +1,6 @@
-package java8.model.person;
+package java8.stream.collection.model.person;
 
-import java8.model.transaction.City;
+import java8.stream.collection.model.transaction.City;
 
 public class Person {
 

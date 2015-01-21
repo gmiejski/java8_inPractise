@@ -1,6 +1,6 @@
-package java8.model.person.stringify;
+package java8.stream.collection.model.person.stringify;
 
-import java8.model.person.Person;
+import java8.stream.collection.model.person.Person;
 
 public class SurnameSexStrigifier implements PersonStringifier {
 

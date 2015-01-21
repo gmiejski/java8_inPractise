@@ -1,4 +1,4 @@
-package java8;
+package java8.stream.fibonacci;
 
 import java.util.List;
 import java.util.function.Supplier;

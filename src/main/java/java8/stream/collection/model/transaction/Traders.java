@@ -1,6 +1,6 @@
-package java8.model.transaction;
+package java8.stream.collection.model.transaction;
 
-import java8.model.person.Person;
+import java8.stream.collection.model.person.Person;
 
 import java.util.Arrays;
 import java.util.Collection;

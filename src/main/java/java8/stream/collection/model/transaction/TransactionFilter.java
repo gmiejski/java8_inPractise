@@ -1,4 +1,4 @@
-package java8.model.transaction;
+package java8.stream.collection.model.transaction;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

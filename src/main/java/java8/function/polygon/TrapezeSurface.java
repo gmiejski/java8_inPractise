@@ -1,4 +1,4 @@
-package java8.polygon;
+package java8.function.polygon;
 
 import java.util.function.Function;
 
